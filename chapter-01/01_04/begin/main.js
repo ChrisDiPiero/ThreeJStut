@@ -1,13 +1,18 @@
 function init() {
-	var scene = new THREE.Scene();
+	const scene = new THREE.Scene();
 
-	var camera = new THREE.PerspectiveCamera(
+  const geometry = new THREE.BoxGeometry(1, 1, 1); //basic shape in 3js, this is cube
+  const material = new THREE.MeshBasicMaterial({
+    color: 0x00ff00
+  });//mesh basic material is unaffected by lighting
+
+	const camera = new THREE.PerspectiveCamera(
 		45,
 		window.innerWidth/window.innerHeight,
 		1,
 		1000
 	);
-	var renderer = new THREE.WebGLRenderer();
+	const renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	document.getElementById('webgl').appendChild(renderer.domElement);
 	renderer.render(

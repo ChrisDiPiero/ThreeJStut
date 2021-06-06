@@ -1,5 +1,5 @@
 function init() {
-const scene = new THREE.Scene(); //container for all objects this IS the world
+  const scene = new THREE.Scene(); //container for all objects this IS the world
 
   const camera = new THREE.PerspectiveCamera( //also need a camera for POV
     45, // field of view. how much of the Scene

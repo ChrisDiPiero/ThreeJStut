@@ -5,6 +5,12 @@ function init() {
   const material = new THREE.MeshBasicMaterial({
     color: 0x00ff00
   });//mesh basic material is unaffected by lighting
+  const mesh = new THREE.Mesh(
+    geometry, //pass geometry and material vars to mesh to create object
+    material
+  );
+
+  scene.add(mesh);
 
 	const camera = new THREE.PerspectiveCamera(
 		45,

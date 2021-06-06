@@ -10,7 +10,11 @@ function init() {
 		1,
 		1000
 	);
+  camera.position.x = 2; 
+  camera.position.y = 1; 
   camera.position.z = 5; //box wasn't showing up. all origins are at 0,0,0. X and y normal cartesian, z is "depth" from user perspective
+
+  camera.lookAt(new THREE.Vector3(0, 0, 0)); //add method to make the camera look at a point in space (in this case, origin); 
 
 	const renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerWidth, window.innerHeight);
